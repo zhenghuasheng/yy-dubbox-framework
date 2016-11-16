@@ -1,0 +1,2 @@
+providerAuthFilter = com.etong.filter.ProviderAuthFilter
+consumerAuthFilter = com.etong.filter.ConsumerAuthFilter

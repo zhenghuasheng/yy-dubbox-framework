@@ -1,0 +1,547 @@
+2015-11-11 09:29:47,955-[ERROR]  [DUBBO] Configuration problem: Failed to import bean definitions from URL location [classpath:simplesm-context.xml]
+Offending resource: file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\spring-config.xml]; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [simplesm-context.xml]; nested exception is java.io.FileNotFoundException: class path resource [simplesm-context.xml] cannot be opened because it does not exist, dubbo version: 2.8.4, current host: 127.0.0.1
+org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Failed to import bean definitions from URL location [classpath:simplesm-context.xml]
+Offending resource: file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\spring-config.xml]; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [simplesm-context.xml]; nested exception is java.io.FileNotFoundException: class path resource [simplesm-context.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:68)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:76)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:256)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseDefaultElement(DefaultBeanDefinitionDocumentReader.java:207)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:192)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:139)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:108)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:493)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:243)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:127)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:93)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:130)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [simplesm-context.xml]; nested exception is java.io.FileNotFoundException: class path resource [simplesm-context.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:341)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:250)
+	... 21 more
+Caused by: java.io.FileNotFoundException: class path resource [simplesm-context.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:171)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:328)
+	... 25 more
+2015-11-11 09:31:14,849-[ERROR]  [DUBBO] Configuration problem: Failed to import bean definitions from URL location [classpath:simplesm-context.xml]
+Offending resource: file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\spring-config.xml]; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [simplesm-context.xml]; nested exception is java.io.FileNotFoundException: class path resource [simplesm-context.xml] cannot be opened because it does not exist, dubbo version: 2.8.4, current host: 127.0.0.1
+org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Failed to import bean definitions from URL location [classpath:simplesm-context.xml]
+Offending resource: file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\spring-config.xml]; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [simplesm-context.xml]; nested exception is java.io.FileNotFoundException: class path resource [simplesm-context.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:68)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:76)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:256)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseDefaultElement(DefaultBeanDefinitionDocumentReader.java:207)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:192)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:139)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:108)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:493)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:243)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:127)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:93)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:130)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [simplesm-context.xml]; nested exception is java.io.FileNotFoundException: class path resource [simplesm-context.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:341)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:250)
+	... 21 more
+Caused by: java.io.FileNotFoundException: class path resource [simplesm-context.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:171)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:328)
+	... 25 more
+2015-11-11 09:34:28,286-[ERROR]  [DUBBO] Configuration problem: Failed to import bean definitions from URL location [classpath:simplesm-context.xml]
+Offending resource: file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\spring-config.xml]; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [simplesm-context.xml]; nested exception is java.io.FileNotFoundException: class path resource [simplesm-context.xml] cannot be opened because it does not exist, dubbo version: 2.8.4, current host: 127.0.0.1
+org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Failed to import bean definitions from URL location [classpath:simplesm-context.xml]
+Offending resource: file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\spring-config.xml]; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [simplesm-context.xml]; nested exception is java.io.FileNotFoundException: class path resource [simplesm-context.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:68)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:76)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:256)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseDefaultElement(DefaultBeanDefinitionDocumentReader.java:207)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:192)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:139)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:108)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:493)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:243)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:127)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:93)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:130)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [simplesm-context.xml]; nested exception is java.io.FileNotFoundException: class path resource [simplesm-context.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:341)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:250)
+	... 21 more
+Caused by: java.io.FileNotFoundException: class path resource [simplesm-context.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:171)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:328)
+	... 25 more
+2015-11-11 09:37:42,216-[ERROR]  [DUBBO] Configuration problem: Failed to import bean definitions from URL location [classpath:yt-db.xml]
+Offending resource: file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\spring-config.xml]; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [yt-db.xml]; nested exception is java.io.FileNotFoundException: class path resource [yt-db.xml] cannot be opened because it does not exist, dubbo version: 2.8.4, current host: 127.0.0.1
+org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Failed to import bean definitions from URL location [classpath:yt-db.xml]
+Offending resource: file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\spring-config.xml]; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [yt-db.xml]; nested exception is java.io.FileNotFoundException: class path resource [yt-db.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.parsing.FailFastProblemReporter.error(FailFastProblemReporter.java:68)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:85)
+	at org.springframework.beans.factory.parsing.ReaderContext.error(ReaderContext.java:76)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:256)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseDefaultElement(DefaultBeanDefinitionDocumentReader.java:207)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.parseBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:192)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.doRegisterBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:139)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.registerBeanDefinitions(DefaultBeanDefinitionDocumentReader.java:108)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.registerBeanDefinitions(XmlBeanDefinitionReader.java:493)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:390)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:334)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:180)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:243)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:127)
+	at org.springframework.context.support.AbstractXmlApplicationContext.loadBeanDefinitions(AbstractXmlApplicationContext.java:93)
+	at org.springframework.context.support.AbstractRefreshableApplicationContext.refreshBeanFactory(AbstractRefreshableApplicationContext.java:130)
+	at org.springframework.context.support.AbstractApplicationContext.obtainFreshBeanFactory(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:451)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: IOException parsing XML document from class path resource [yt-db.xml]; nested exception is java.io.FileNotFoundException: class path resource [yt-db.xml] cannot be opened because it does not exist
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:341)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:174)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:209)
+	at org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader.importBeanDefinitionResource(DefaultBeanDefinitionDocumentReader.java:250)
+	... 21 more
+Caused by: java.io.FileNotFoundException: class path resource [yt-db.xml] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:171)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:328)
+	... 25 more
+2015-11-11 09:41:03,755-[ERROR]  [DUBBO] Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around, dubbo version: 2.8.4, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1037)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:983)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:487)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:741)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:163)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1030)
+	... 13 more
+Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.<clinit>(ReflectiveAspectJAdvisorFactory.java:74)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.<init>(AnnotationAwareAspectJAutoProxyCreator.java:53)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:148)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Around
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 22 more
+2015-11-11 09:43:21,186-[ERROR]  [DUBBO] Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around, dubbo version: 2.8.4, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.aop.config.internalAutoProxyCreator': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1037)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:983)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:487)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:741)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:464)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:163)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1030)
+	... 13 more
+Caused by: java.lang.NoClassDefFoundError: org/aspectj/lang/annotation/Around
+	at org.springframework.aop.aspectj.annotation.ReflectiveAspectJAdvisorFactory.<clinit>(ReflectiveAspectJAdvisorFactory.java:74)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.<init>(AnnotationAwareAspectJAutoProxyCreator.java:53)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:148)
+	... 15 more
+Caused by: java.lang.ClassNotFoundException: org.aspectj.lang.annotation.Around
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 22 more
+2015-11-11 10:01:45,513-[ERROR]  [DUBBO] Error creating bean with name 'defaultMemcachedClient' defined in file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\simplesm-config.xml]: Cannot create inner bean 'com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl#1464cc1a' of type [com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl] while setting bean property 'cacheClientFactory'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl] for bean with name 'com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl#1464cc1a' defined in file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\simplesm-config.xml]; nested exception is java.lang.ClassNotFoundException: com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl, dubbo version: 2.8.4, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultMemcachedClient' defined in file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\simplesm-config.xml]: Cannot create inner bean 'com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl#1464cc1a' of type [com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl] while setting bean property 'cacheClientFactory'; nested exception is org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl] for bean with name 'com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl#1464cc1a' defined in file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\simplesm-config.xml]; nested exception is java.lang.ClassNotFoundException: com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:287)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:122)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1417)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1158)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl] for bean with name 'com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl#1464cc1a' defined in file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\simplesm-config.xml]; nested exception is java.lang.ClassNotFoundException: com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1281)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:435)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:276)
+	... 16 more
+Caused by: java.lang.ClassNotFoundException: com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:266)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1273)
+	... 18 more
+2015-11-11 10:03:18,753-[ERROR]  [DUBBO] Error creating bean with name 'defaultMemcachedClient' defined in file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\simplesm-config.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/annotation/JsonAutoDetect, dubbo version: 2.8.4, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultMemcachedClient' defined in file [E:\Etongcar\trunk\00_Dev\000_源代码\yt-framework\make\yt-sms_jar\config\simplesm-config.xml]: Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/annotation/JsonAutoDetect
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1512)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:615)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/annotation/JsonAutoDetect
+	at com.fasterxml.jackson.databind.introspect.VisibilityChecker$Std.<clinit>(VisibilityChecker.java:172)
+	at com.fasterxml.jackson.databind.ObjectMapper.<clinit>(ObjectMapper.java:196)
+	at com.google.code.ssm.CacheFactory.afterPropertiesSet(CacheFactory.java:112)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1509)
+	... 13 more
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.annotation.JsonAutoDetect
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 18 more
+2015-11-11 10:06:36,105-[ERROR]  [DUBBO] Error creating bean with name 'dbManagerImpl' defined in class path resource [yt-db.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.etong.pt.data.dc.DbManagerImpl]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/apache/ibatis/session/SqlSessionFactoryBuilder, dubbo version: 2.8.4, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dbManagerImpl' defined in class path resource [yt-db.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.etong.pt.data.dc.DbManagerImpl]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/apache/ibatis/session/SqlSessionFactoryBuilder
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1037)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:983)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:487)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:633)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.etong.pt.data.dc.DbManagerImpl]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/apache/ibatis/session/SqlSessionFactoryBuilder
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:163)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1030)
+	... 14 more
+Caused by: java.lang.NoClassDefFoundError: org/apache/ibatis/session/SqlSessionFactoryBuilder
+	at com.etong.pt.data.dc.DbManagerImpl.init(DbManagerImpl.java:38)
+	at com.etong.pt.data.dc.DbManagerImpl.<init>(DbManagerImpl.java:25)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:148)
+	... 16 more
+Caused by: java.lang.ClassNotFoundException: org.apache.ibatis.session.SqlSessionFactoryBuilder
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 23 more
+2015-11-11 10:12:27,107-[ERROR]  [DUBBO] Error creating bean with name 'dbManagerImpl' defined in class path resource [yt-db.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.etong.pt.data.dc.DbManagerImpl]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/apache/ibatis/session/SqlSessionFactoryBuilder, dubbo version: 2.8.4, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dbManagerImpl' defined in class path resource [yt-db.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.etong.pt.data.dc.DbManagerImpl]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/apache/ibatis/session/SqlSessionFactoryBuilder
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1037)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:983)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:487)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:633)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.etong.pt.data.dc.DbManagerImpl]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/apache/ibatis/session/SqlSessionFactoryBuilder
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:163)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1030)
+	... 14 more
+Caused by: java.lang.NoClassDefFoundError: org/apache/ibatis/session/SqlSessionFactoryBuilder
+	at com.etong.pt.data.dc.DbManagerImpl.init(DbManagerImpl.java:38)
+	at com.etong.pt.data.dc.DbManagerImpl.<init>(DbManagerImpl.java:25)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:148)
+	... 16 more
+Caused by: java.lang.ClassNotFoundException: org.apache.ibatis.session.SqlSessionFactoryBuilder
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 23 more
+2015-11-11 10:13:35,497-[ERROR]  [DUBBO] Error creating bean with name 'dbManagerImpl' defined in class path resource [yt-db.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.etong.pt.data.dc.DbManagerImpl]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/alibaba/druid/pool/DruidDataSource, dubbo version: 2.8.4, current host: 127.0.0.1
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dbManagerImpl' defined in class path resource [yt-db.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.etong.pt.data.dc.DbManagerImpl]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/alibaba/druid/pool/DruidDataSource
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1037)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:983)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:487)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:633)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+Caused by: org.springframework.beans.BeanInstantiationException: Could not instantiate bean class [com.etong.pt.data.dc.DbManagerImpl]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/alibaba/druid/pool/DruidDataSource
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:163)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1030)
+	... 14 more
+Caused by: java.lang.NoClassDefFoundError: com/alibaba/druid/pool/DruidDataSource
+	at com.etong.pt.datasource.DruidDataSourceFactory.<init>(DruidDataSourceFactory.java:11)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.dataSourceElement(XMLConfigBuilder.java:274)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.environmentsElement(XMLConfigBuilder.java:232)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:104)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:92)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:66)
+	at com.etong.pt.data.dc.DbManagerImpl.init(DbManagerImpl.java:38)
+	at com.etong.pt.data.dc.DbManagerImpl.<init>(DbManagerImpl.java:25)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:148)
+	... 16 more
+Caused by: java.lang.ClassNotFoundException: com.alibaba.druid.pool.DruidDataSource
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 35 more
+2015-11-11 11:11:56,505-[ERROR]  [DUBBO] No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-sms_jar/bin/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-sms_jar/bin/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+, dubbo version: 2.8.4, current host: 127.0.0.1
+java.lang.IllegalStateException: No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-sms_jar/bin/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-sms_jar/bin/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.findException(ExtensionLoader.java:494)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:501)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+2015-11-11 11:11:57,693-[ERROR]  [DUBBO] No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-sms_jar/bin/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-sms_jar/bin/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+, dubbo version: 2.8.4, current host: 127.0.0.1
+java.lang.IllegalStateException: No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-sms_jar/bin/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-sms_jar/bin/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.findException(ExtensionLoader.java:494)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:501)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)

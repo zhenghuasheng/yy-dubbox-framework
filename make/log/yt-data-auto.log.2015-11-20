@@ -1,0 +1,14 @@
+2015-11-20 08:27:51,505-[INFO] Client session timed out, have not heard from server in 46767507ms for sessionid 0x1510e480e840074, closing socket connection and attempting reconnect
+2015-11-20 08:27:51,816-[WARN]  [DUBBO] Close channel NettyChannel [channel=[id: 0x838ce621, /192.168.10.27:50864 => /192.168.10.27:30990]], because heartbeat read idle time out: 180000ms, dubbo version: 2.8.4, current host: 127.0.0.1
+2015-11-20 08:27:52,026-[INFO]  [DUBBO] Close netty channel [id: 0x838ce621, /192.168.10.27:50864 => /192.168.10.27:30990], dubbo version: 2.8.4, current host: 127.0.0.1
+2015-11-20 08:27:51,941-[INFO] zookeeper state changed (Disconnected)
+2015-11-20 08:27:56,436-[INFO]  [DUBBO] disconected from /192.168.10.27:50864,url:dubbo://192.168.10.27:30990/com.etong.data.auto.service.AutoData?anyhost=true&application=data-user-service-app&channel.readonly.sent=true&cluster=failfast&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=com.etong.data.auto.service.AutoData&methods=getExpandVehicleByExample,getCarPhotoByExample,getCarByExample,setExpandVehicle,getCarParamByExample,getVehicleByExample&pid=10796&revision=auto&side=provider&timeout=5000&timestamp=1447929783173, dubbo version: 2.8.4, current host: 127.0.0.1
+2015-11-20 08:27:56,691-[WARN] Remove a session: 192.168.10.38:11211
+2015-11-20 08:27:58,724-[WARN] Trying to connect to 192.168.10.38:11211 for 1 times
+2015-11-20 08:27:58,728-[WARN] Add a session: 192.168.10.38:11211
+2015-11-20 08:27:59,001-[INFO] Opening socket connection to server zookeeper.com/192.168.10.27:5181. Will not attempt to authenticate using SASL (unknown error)
+2015-11-20 08:27:59,003-[INFO] Socket connection established to zookeeper.com/192.168.10.27:5181, initiating session
+2015-11-20 08:28:02,484-[INFO] Session establishment complete on server zookeeper.com/192.168.10.27:5181, sessionid = 0x1510e480e840074, negotiated timeout = 40000
+2015-11-20 08:28:02,485-[INFO] zookeeper state changed (SyncConnected)
+2015-11-20 08:43:57,368-[WARN]  [DUBBO] All clients has discontected from /192.168.10.27:30990. You can graceful shutdown now., dubbo version: 2.8.4, current host: 127.0.0.1
+2015-11-20 08:43:57,388-[INFO]  [DUBBO] disconected from /192.168.10.27:53664,url:dubbo://192.168.10.27:30990/com.etong.data.auto.service.AutoData?anyhost=true&application=data-user-service-app&channel.readonly.sent=true&cluster=failfast&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=com.etong.data.auto.service.AutoData&methods=getExpandVehicleByExample,getCarPhotoByExample,getCarByExample,setExpandVehicle,getCarParamByExample,getVehicleByExample&pid=10796&revision=auto&side=provider&timeout=5000&timestamp=1447929783173, dubbo version: 2.8.4, current host: 127.0.0.1

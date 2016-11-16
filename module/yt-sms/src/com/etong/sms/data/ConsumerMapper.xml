@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.etong.sms.data.ConsumerMapper">
+
+    <insert id="addConsumerRequset" parameterType="Consumer" keyProperty="id">
+        <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+            SELECT @@IDENTITY
+        </selectKey>
+        INSERT INTO sms.t_consumer
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="memberId !=null">
+                memberId,
+            </if>
+            <if test="memberName !=null">
+                memberName,
+            </if>
+            <if test="memberIp !=null">
+                memberIp,
+            </if>
+            <if test="creatTime !=null">
+                creatTime,
+            </if>
+            <if test="operateTime!=null">
+                operateTime,
+            </if>
+            <if test="operator !=null">
+                operator,
+            </if>
+            <if test="viable !=null">
+                viable,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="memberId !=null">
+                #{memberId},
+            </if>
+            <if test="memberName !=null">
+                #{memberName},
+            </if>
+            <if test="memberIp !=null">
+                #{memberIp},
+            </if>
+            <if test="creatTime !=null">
+                #{creatTime},
+            </if>
+            <if test="operateTime!=null">
+                #{operateTime},
+            </if>
+            <if test="operator !=null">
+                #{operator},
+            </if>
+            <if test="viable !=null">
+                #{viable},
+            </if>
+        </trim>
+    </insert>
+
+    <select id="getConsumerRequest" parameterType="map" resultType="Consumer">
+        select * from sms.t_consumer
+        <where>
+            <trim prefixOverrides="and">
+                <if test="memberName!=null">memberName=#{memberName}</if>
+                <if test="memberId!=null">and memberId=#{memberId}</if>
+            </trim>
+        </where>
+    </select>
+
+    <select id="getConsumers" parameterType="map" resultType="Consumer">
+        SELECT * FROM sms.t_consumer
+        <if test="start!=null or count!=null">
+            limit #{start},#{count}
+        </if>
+    </select>
+
+    <update id="updateConsumerRequest" parameterType="Consumer">
+        UPDATE sms.t_consumer
+        <set>
+            <if test="memberId!=null">
+                memberId=#{meberId},
+            </if>
+            <if test="memberName!=null">
+                memberName=#{memberName},
+            </if>
+            <if test="memberIp!=null">
+                memberIp=#{memberIp},
+            </if>
+            <if test="creatTime!=null">
+                creatTime=#{creatTime},
+            </if>
+            <if test="operateTime!=null">
+                operateTime=#{operateTime},
+            </if>
+            <if test="operator!=null">
+                operator=#{operator},
+            </if>
+            <if test="viable!=null">
+                viable=#{viable}
+            </if>
+        </set>
+    </update>
+</mapper>

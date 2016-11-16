@@ -1,0 +1,548 @@
+2015-11-10 12:57:04,129-[ERROR]  [DUBBO] Duplicate class com/alibaba/dubbo/common/Version.class in 2 jar [file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/bin/dubbo-2.8.4.jar!/com/alibaba/dubbo/common/Version.class, file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/com/alibaba/dubbo/common/Version.class], dubbo version: 2.8.4, current host: 127.0.0.1
+2015-11-10 12:57:04,130-[ERROR]  [DUBBO] No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+, dubbo version: 2.8.4, current host: 127.0.0.1
+java.lang.IllegalStateException: No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.findException(ExtensionLoader.java:494)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:501)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+2015-11-10 13:08:36,779-[ERROR]  [DUBBO] No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+, dubbo version: 2.8.4, current host: 127.0.0.1
+java.lang.IllegalStateException: No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.findException(ExtensionLoader.java:494)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:501)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+2015-11-10 13:08:43,973-[ERROR]  [DUBBO] No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+, dubbo version: 2.8.4, current host: 127.0.0.1
+java.lang.IllegalStateException: No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.findException(ExtensionLoader.java:494)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:501)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+2015-11-10 14:21:51,209-[ERROR]  [DUBBO] Duplicate class com/alibaba/dubbo/common/Version.class in 2 jar [file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/bin/dubbo-2.8.4.jar!/com/alibaba/dubbo/common/Version.class, file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/com/alibaba/dubbo/common/Version.class], dubbo version: 2.8.4, current host: 127.0.0.1
+2015-11-10 14:21:51,210-[ERROR]  [DUBBO] No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+, dubbo version: 2.8.4, current host: 127.0.0.1
+java.lang.IllegalStateException: No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.findException(ExtensionLoader.java:494)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:501)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+2015-11-10 14:22:03,470-[ERROR]  [DUBBO] Duplicate class com/alibaba/dubbo/common/Version.class in 2 jar [file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/bin/dubbo-2.8.4.jar!/com/alibaba/dubbo/common/Version.class, file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/com/alibaba/dubbo/common/Version.class], dubbo version: 2.8.4, current host: 127.0.0.1
+2015-11-10 14:22:03,471-[ERROR]  [DUBBO] No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+, dubbo version: 2.8.4, current host: 127.0.0.1
+java.lang.IllegalStateException: No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.findException(ExtensionLoader.java:494)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:501)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+2015-11-10 14:22:11,674-[ERROR]  [DUBBO] Duplicate class com/alibaba/dubbo/common/Version.class in 2 jar [file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/bin/dubbo-2.8.4.jar!/com/alibaba/dubbo/common/Version.class, file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/com/alibaba/dubbo/common/Version.class], dubbo version: 2.8.4, current host: 127.0.0.1
+2015-11-10 14:22:11,675-[ERROR]  [DUBBO] No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+, dubbo version: 2.8.4, current host: 127.0.0.1
+java.lang.IllegalStateException: No such extension com.alibaba.dubbo.container.Container by name -Xms64m, possible causes: 
+(1) com.alibaba.dubbo.container.logback.LogbackContainer:
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+java.lang.IllegalStateException: Failed to load extension class(interface: interface com.alibaba.dubbo.container.Container, class line: com.alibaba.dubbo.container.logback.LogbackContainer) in jar:file:/E:/Etongcar/trunk/00_Dev/000_%e6%ba%90%e4%bb%a3%e7%a0%81/yt-framework/make/yt-checkrepeat_jar/lib/dubbo-2.8.4.jar!/META-INF/dubbo/internal/com.alibaba.dubbo.container.Container, cause: ch/qos/logback/core/Context
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:685)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadExtensionClasses(ExtensionLoader.java:591)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtensionClasses(ExtensionLoader.java:567)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:499)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+Caused by: java.lang.NoClassDefFoundError: ch/qos/logback/core/Context
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.loadFile(ExtensionLoader.java:627)
+	... 5 more
+Caused by: java.lang.ClassNotFoundException: ch.qos.logback.core.Context
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 8 more
+
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.findException(ExtensionLoader.java:494)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.createExtension(ExtensionLoader.java:501)
+	at com.alibaba.dubbo.common.extension.ExtensionLoader.getExtension(ExtensionLoader.java:319)
+	at com.alibaba.dubbo.container.Main.main(Main.java:56)
+2015-11-10 15:15:22,100-[ERROR]  [DUBBO] Fail to start server(url: dubbo://192.168.10.27:30905/com.etong.dc.common.RepeatHelper?anyhost=true&application=yt-checkrepeat-server&channel.readonly.sent=true&cluster=failfast&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=com.etong.dc.common.RepeatHelper&methods=checkRepeatInfo&pid=5256&revision=checkrepeat&side=provider&timeout=15000&timestamp=1447139721834) Failed to bind NettyServer on /192.168.10.27:30905, cause: Failed to bind to: /0.0.0.0:30905, dubbo version: 2.8.4, current host: 127.0.0.1
+com.alibaba.dubbo.rpc.RpcException: Fail to start server(url: dubbo://192.168.10.27:30905/com.etong.dc.common.RepeatHelper?anyhost=true&application=yt-checkrepeat-server&channel.readonly.sent=true&cluster=failfast&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=com.etong.dc.common.RepeatHelper&methods=checkRepeatInfo&pid=5256&revision=checkrepeat&side=provider&timeout=15000&timestamp=1447139721834) Failed to bind NettyServer on /192.168.10.27:30905, cause: Failed to bind to: /0.0.0.0:30905
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.createServer(DubboProtocol.java:331)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.openServer(DubboProtocol.java:308)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.export(DubboProtocol.java:258)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:56)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:55)
+	at com.alibaba.dubbo.rpc.Protocol$Adpative.export(Protocol$Adpative.java)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.doLocalExport(RegistryProtocol.java:153)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.export(RegistryProtocol.java:107)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:54)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:53)
+	at com.alibaba.dubbo.rpc.Protocol$Adpative.export(Protocol$Adpative.java)
+	at com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:489)
+	at com.alibaba.dubbo.config.ServiceConfig.doExportUrls(ServiceConfig.java:285)
+	at com.alibaba.dubbo.config.ServiceConfig.doExport(ServiceConfig.java:246)
+	at com.alibaba.dubbo.config.ServiceConfig.export(ServiceConfig.java:145)
+	at com.alibaba.dubbo.config.spring.ServiceBean.onApplicationEvent(ServiceBean.java:110)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:96)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:334)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:948)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+	at com.etong.dubbox.Launch.main(Launch.java:8)
+Caused by: com.alibaba.dubbo.remoting.RemotingException: Failed to bind NettyServer on /192.168.10.27:30905, cause: Failed to bind to: /0.0.0.0:30905
+	at com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:73)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyServer.<init>(NettyServer.java:63)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyTransporter.bind(NettyTransporter.java:33)
+	at com.alibaba.dubbo.remoting.Transporter$Adpative.bind(Transporter$Adpative.java)
+	at com.alibaba.dubbo.remoting.Transporters.bind(Transporters.java:48)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchanger.bind(HeaderExchanger.java:41)
+	at com.alibaba.dubbo.remoting.exchange.Exchangers.bind(Exchangers.java:63)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.createServer(DubboProtocol.java:329)
+	... 24 more
+Caused by: org.jboss.netty.channel.ChannelException: Failed to bind to: /0.0.0.0:30905
+	at org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:272)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyServer.doOpen(NettyServer.java:94)
+	at com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:68)
+	... 31 more
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioServerBoss$RegisterTask.run(NioServerBoss.java:193)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.processTaskQueue(AbstractNioSelector.java:366)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:290)
+	at org.jboss.netty.channel.socket.nio.NioServerBoss.run(NioServerBoss.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-11-10 15:17:46,637-[ERROR]  [DUBBO] Fail to start server(url: dubbo://192.168.10.27:30905/com.etong.dc.common.RepeatHelper?anyhost=true&application=yt-checkrepeat-server&channel.readonly.sent=true&cluster=failfast&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=com.etong.dc.common.RepeatHelper&methods=checkRepeatInfo&pid=7992&revision=checkrepeat&side=provider&timeout=15000&timestamp=1447139866380) Failed to bind NettyServer on /192.168.10.27:30905, cause: Failed to bind to: /0.0.0.0:30905, dubbo version: 2.8.4, current host: 127.0.0.1
+com.alibaba.dubbo.rpc.RpcException: Fail to start server(url: dubbo://192.168.10.27:30905/com.etong.dc.common.RepeatHelper?anyhost=true&application=yt-checkrepeat-server&channel.readonly.sent=true&cluster=failfast&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=com.etong.dc.common.RepeatHelper&methods=checkRepeatInfo&pid=7992&revision=checkrepeat&side=provider&timeout=15000&timestamp=1447139866380) Failed to bind NettyServer on /192.168.10.27:30905, cause: Failed to bind to: /0.0.0.0:30905
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.createServer(DubboProtocol.java:331)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.openServer(DubboProtocol.java:308)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.export(DubboProtocol.java:258)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:56)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:55)
+	at com.alibaba.dubbo.rpc.Protocol$Adpative.export(Protocol$Adpative.java)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.doLocalExport(RegistryProtocol.java:153)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.export(RegistryProtocol.java:107)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:54)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:53)
+	at com.alibaba.dubbo.rpc.Protocol$Adpative.export(Protocol$Adpative.java)
+	at com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:489)
+	at com.alibaba.dubbo.config.ServiceConfig.doExportUrls(ServiceConfig.java:285)
+	at com.alibaba.dubbo.config.ServiceConfig.doExport(ServiceConfig.java:246)
+	at com.alibaba.dubbo.config.ServiceConfig.export(ServiceConfig.java:145)
+	at com.alibaba.dubbo.config.spring.ServiceBean.onApplicationEvent(ServiceBean.java:110)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:96)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:334)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:948)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+	at com.etong.dubbox.Launch.main(Launch.java:8)
+Caused by: com.alibaba.dubbo.remoting.RemotingException: Failed to bind NettyServer on /192.168.10.27:30905, cause: Failed to bind to: /0.0.0.0:30905
+	at com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:73)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyServer.<init>(NettyServer.java:63)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyTransporter.bind(NettyTransporter.java:33)
+	at com.alibaba.dubbo.remoting.Transporter$Adpative.bind(Transporter$Adpative.java)
+	at com.alibaba.dubbo.remoting.Transporters.bind(Transporters.java:48)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchanger.bind(HeaderExchanger.java:41)
+	at com.alibaba.dubbo.remoting.exchange.Exchangers.bind(Exchangers.java:63)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.createServer(DubboProtocol.java:329)
+	... 24 more
+Caused by: org.jboss.netty.channel.ChannelException: Failed to bind to: /0.0.0.0:30905
+	at org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:272)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyServer.doOpen(NettyServer.java:94)
+	at com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:68)
+	... 31 more
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioServerBoss$RegisterTask.run(NioServerBoss.java:193)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.processTaskQueue(AbstractNioSelector.java:366)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:290)
+	at org.jboss.netty.channel.socket.nio.NioServerBoss.run(NioServerBoss.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-11-10 18:16:23,477-[ERROR]  [DUBBO] Fail to start server(url: dubbo://192.168.10.27:30905/com.etong.dc.common.RepeatHelper?anyhost=true&application=yt-checkrepeat-server&channel.readonly.sent=true&cluster=failfast&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=com.etong.dc.common.RepeatHelper&methods=checkRepeatInfo&pid=5392&revision=checkrepeat&side=provider&timeout=15000&timestamp=1447150583090) Failed to bind NettyServer on /192.168.10.27:30905, cause: Failed to bind to: /0.0.0.0:30905, dubbo version: 2.8.4, current host: 127.0.0.1
+com.alibaba.dubbo.rpc.RpcException: Fail to start server(url: dubbo://192.168.10.27:30905/com.etong.dc.common.RepeatHelper?anyhost=true&application=yt-checkrepeat-server&channel.readonly.sent=true&cluster=failfast&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=com.etong.dc.common.RepeatHelper&methods=checkRepeatInfo&pid=5392&revision=checkrepeat&side=provider&timeout=15000&timestamp=1447150583090) Failed to bind NettyServer on /192.168.10.27:30905, cause: Failed to bind to: /0.0.0.0:30905
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.createServer(DubboProtocol.java:331)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.openServer(DubboProtocol.java:308)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.export(DubboProtocol.java:258)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:55)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:56)
+	at com.alibaba.dubbo.rpc.Protocol$Adpative.export(Protocol$Adpative.java)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.doLocalExport(RegistryProtocol.java:153)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.export(RegistryProtocol.java:107)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:53)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:54)
+	at com.alibaba.dubbo.rpc.Protocol$Adpative.export(Protocol$Adpative.java)
+	at com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:489)
+	at com.alibaba.dubbo.config.ServiceConfig.doExportUrls(ServiceConfig.java:285)
+	at com.alibaba.dubbo.config.ServiceConfig.doExport(ServiceConfig.java:246)
+	at com.alibaba.dubbo.config.ServiceConfig.export(ServiceConfig.java:145)
+	at com.alibaba.dubbo.config.spring.ServiceBean.onApplicationEvent(ServiceBean.java:110)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:96)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:334)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:948)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+	at com.etong.dubbox.Launch.main(Launch.java:8)
+Caused by: com.alibaba.dubbo.remoting.RemotingException: Failed to bind NettyServer on /192.168.10.27:30905, cause: Failed to bind to: /0.0.0.0:30905
+	at com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:73)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyServer.<init>(NettyServer.java:63)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyTransporter.bind(NettyTransporter.java:33)
+	at com.alibaba.dubbo.remoting.Transporter$Adpative.bind(Transporter$Adpative.java)
+	at com.alibaba.dubbo.remoting.Transporters.bind(Transporters.java:48)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchanger.bind(HeaderExchanger.java:41)
+	at com.alibaba.dubbo.remoting.exchange.Exchangers.bind(Exchangers.java:63)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.createServer(DubboProtocol.java:329)
+	... 24 more
+Caused by: org.jboss.netty.channel.ChannelException: Failed to bind to: /0.0.0.0:30905
+	at org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:272)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyServer.doOpen(NettyServer.java:94)
+	at com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:68)
+	... 31 more
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioServerBoss$RegisterTask.run(NioServerBoss.java:193)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.processTaskQueue(AbstractNioSelector.java:366)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:290)
+	at org.jboss.netty.channel.socket.nio.NioServerBoss.run(NioServerBoss.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2015-11-10 18:21:54,645-[ERROR]  [DUBBO] Fail to start server(url: dubbo://192.168.10.27:30905/com.etong.dc.common.RepeatHelper?anyhost=true&application=yt-checkrepeat-server&channel.readonly.sent=true&cluster=failfast&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=com.etong.dc.common.RepeatHelper&methods=checkRepeatInfo&pid=5612&revision=checkrepeat&side=provider&timeout=15000&timestamp=1447150914394) Failed to bind NettyServer on /192.168.10.27:30905, cause: Failed to bind to: /0.0.0.0:30905, dubbo version: 2.8.4, current host: 127.0.0.1
+com.alibaba.dubbo.rpc.RpcException: Fail to start server(url: dubbo://192.168.10.27:30905/com.etong.dc.common.RepeatHelper?anyhost=true&application=yt-checkrepeat-server&channel.readonly.sent=true&cluster=failfast&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=com.etong.dc.common.RepeatHelper&methods=checkRepeatInfo&pid=5612&revision=checkrepeat&side=provider&timeout=15000&timestamp=1447150914394) Failed to bind NettyServer on /192.168.10.27:30905, cause: Failed to bind to: /0.0.0.0:30905
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.createServer(DubboProtocol.java:331)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.openServer(DubboProtocol.java:308)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.export(DubboProtocol.java:258)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:56)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:55)
+	at com.alibaba.dubbo.rpc.Protocol$Adpative.export(Protocol$Adpative.java)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.doLocalExport(RegistryProtocol.java:153)
+	at com.alibaba.dubbo.registry.integration.RegistryProtocol.export(RegistryProtocol.java:107)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.export(ProtocolListenerWrapper.java:54)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.export(ProtocolFilterWrapper.java:53)
+	at com.alibaba.dubbo.rpc.Protocol$Adpative.export(Protocol$Adpative.java)
+	at com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:489)
+	at com.alibaba.dubbo.config.ServiceConfig.doExportUrls(ServiceConfig.java:285)
+	at com.alibaba.dubbo.config.ServiceConfig.doExport(ServiceConfig.java:246)
+	at com.alibaba.dubbo.config.ServiceConfig.export(ServiceConfig.java:145)
+	at com.alibaba.dubbo.config.spring.ServiceBean.onApplicationEvent(ServiceBean.java:110)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:96)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:334)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:948)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:140)
+	at org.springframework.context.support.FileSystemXmlApplicationContext.<init>(FileSystemXmlApplicationContext.java:94)
+	at com.etong.container.AuthContainer.start(AuthContainer.java:33)
+	at com.alibaba.dubbo.container.Main.main(Main.java:80)
+	at com.etong.dubbox.Launch.main(Launch.java:8)
+Caused by: com.alibaba.dubbo.remoting.RemotingException: Failed to bind NettyServer on /192.168.10.27:30905, cause: Failed to bind to: /0.0.0.0:30905
+	at com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:73)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyServer.<init>(NettyServer.java:63)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyTransporter.bind(NettyTransporter.java:33)
+	at com.alibaba.dubbo.remoting.Transporter$Adpative.bind(Transporter$Adpative.java)
+	at com.alibaba.dubbo.remoting.Transporters.bind(Transporters.java:48)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchanger.bind(HeaderExchanger.java:41)
+	at com.alibaba.dubbo.remoting.exchange.Exchangers.bind(Exchangers.java:63)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol.createServer(DubboProtocol.java:329)
+	... 24 more
+Caused by: org.jboss.netty.channel.ChannelException: Failed to bind to: /0.0.0.0:30905
+	at org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:272)
+	at com.alibaba.dubbo.remoting.transport.netty.NettyServer.doOpen(NettyServer.java:94)
+	at com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:68)
+	... 31 more
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.jboss.netty.channel.socket.nio.NioServerBoss$RegisterTask.run(NioServerBoss.java:193)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.processTaskQueue(AbstractNioSelector.java:366)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:290)
+	at org.jboss.netty.channel.socket.nio.NioServerBoss.run(NioServerBoss.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)

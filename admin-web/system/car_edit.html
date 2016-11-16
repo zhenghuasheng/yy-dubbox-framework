@@ -1,0 +1,962 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <script src="./js/app/checklogin.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <!-- Title and other stuffs -->
+    <title>车款编辑</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <!-- Stylesheets -->
+    <link href="../style/bootstrap.css" rel="stylesheet">
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="../style/font-awesome.css">
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="../style/jquery-ui.css">
+    <!-- Calendar -->
+    <!--<link rel="stylesheet" href="../style/fullcalendar.css">-->
+    <!-- prettyPhoto -->
+    <!--<link rel="stylesheet" href="../style/prettyPhoto.css">-->
+    <!-- Star rating -->
+    <!--<link rel="stylesheet" href="../style/rateit.css">-->
+    <!-- Date picker -->
+    <!--<link rel="stylesheet" href="../style/bootstrap-datetimepicker.min.css">-->
+    <!-- CLEditor -->
+    <!--<link rel="stylesheet" href="../style/jquery.cleditor.css">-->
+    <!-- Uniform -->
+    <!--<link rel="stylesheet" href="../style/uniform.default.css">-->
+    <!-- Bootstrap toggle -->
+    <!--<link rel="stylesheet" href="../style/bootstrap-switch.css">-->
+    <!-- Main stylesheet -->
+    <link href="../style/style.css" rel="stylesheet">
+    <!-- Widgets stylesheet -->
+    <link href="../style/widgets.css" rel="stylesheet">
+    <link href="../style/jquery.fileupload.css" rel="stylesheet">
+    <!-- HTML5 Support for IE -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shim.js"></script>
+    <![endif]-->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon/favicon.png">
+</head>
+
+<body>
+<div id="body-nav">
+</div>
+
+<!-- Main content starts -->
+
+<div class="content">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-dropdown"><a href="#">导航</a></div>
+
+        <!--- Sidebar navigation -->
+        <!-- If the main navigation has sub navigation, then add the class "has_sub" to "li" of main navigation. -->
+        <ul id="nav">
+        </ul>
+    </div>
+
+    <!-- Sidebar ends -->
+
+    <!-- Main bar -->
+    <div class="mainbar">
+
+        <!-- Page heading -->
+        <div class="page-head">
+            <h2 class="pull-left"><i class="icon-table"></i> 车款编辑</h2>
+
+            <!-- Breadcrumb -->
+            <div class="bread-crumb pull-right">
+                <a href="../index.html"><i class="icon-home"></i> 主页</a>
+                <!-- Divider -->
+                <span class="divider">/</span>
+                <a href="./auto.html" class="bread-current">车型</a>
+                <!-- Divider -->
+                <span class="divider">/</span>
+                <a href="./car.html" class="bread-current">车款</a>
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+        <!-- Page heading ends -->
+
+        <!-- Matter -->
+
+        <div class="matter">
+            <div class="container">
+
+                <!--账号资料-->
+                <div class="row">
+
+                    <div class="col-md-8">
+
+                        <div class="widget wgreen">
+
+                            <div class="widget-head">
+                                <div class="pull-left">车款参数</div>
+                                <div class="widget-icons pull-right">
+                                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
+                                    <a href="#" class="wclose"><i class="icon-remove"></i></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="widget-content">
+                                <div class="padd">
+
+                                    <!-- Profile form -->
+
+                                    <!--<div class="form profile">-->
+                                    <!-- Edit profile form (not working)-->
+                                    <div class="carparam form-horizontal">
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="title">车款名称</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="title">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="image">缩略图</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="image">
+                                                <img id="image_url" width="350" height="auto"/>
+                                                <span class="btn btn-success fileinput-button">
+                                                    <i class="glyphicon glyphicon-plus"></i>
+                                                    <span>上传图片</span>
+                                                    <!-- The file input field used as target for the file upload widget -->
+                                                    <input id="fileupload" type="file" name="files[]" multiple>
+                                                </span>
+                                                <!--<div id="progress" class="progress">-->
+                                                <!--<div class="progress-bar progress-bar-success"></div>-->
+                                                <!--</div>-->
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="price">厂商指导价</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="price">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="vol">排量</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="vol">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3">销售状态</label>
+
+                                            <div class="col-lg-2">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="salesRadios" id="salesRadios1"
+                                                               value="1325" checked>在售
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="salesRadios" id="salesRadios2"
+                                                               value="1324">停售
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="salesRadios" id="salesRadios3"
+                                                               value="4232">待售
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--</div>-->
+
+                                </div>
+                            </div>
+                            <div class="widget-foot">
+                                <!-- Footer goes here -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--基本资料-->
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="widget wgreen">
+
+                            <div class="widget-head">
+                                <div class="pull-left">详细参数</div>
+                                <div class="widget-icons pull-right">
+                                    <a href="#" class="wminimize"><i class="icon-chevron-down"></i></a>
+                                    <a href="#" class="wclose"><i class="icon-remove"></i></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="widget-content" style="display: none">
+                                <div class="padd">
+
+                                    <!-- Profile form -->
+
+                                    <!--<div class="form profile">-->
+                                    <!-- Edit profile form (not working)-->
+                                    <div class="carparam form-horizontal">
+                                        <!-- Name -->
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="warranty">整车质保</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="warranty">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="max_speed">最高车速(Km/h)</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="max_speed">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="drive_system">驱动方式</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="drive_system">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="curb_weight">整备质量(Kg)</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="curb_weight">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="door_num">车门数</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="door_num">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="category">车身结构类型</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="category">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="structure">车体结构</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="structure">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="length">长</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="length">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="width">宽</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="width">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="height">高</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="height">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="wheelbase">轴距(mm)</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="wheelbase">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="front_gauge">前轮距(mm)</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="front_gauge">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="rear_track">后轮距(mm)</label>
+
+                                            <div class="col-lg-7">
+                                                <input type="text" class="form-control" id="rear_track">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="trunk_vol">行李厢容积(L)</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="trunk_vol">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="tank_vol">油箱容积(L)</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="tank_vol">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="fuel_type">燃料类型</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="fuel_type">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="fuel_grade">燃油标号</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="fuel_grade">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="engine">发动机型号</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="engine">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="max_power">最大功率(kW)</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="max_power">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3"
+                                                   for="max_power_rev">最大功率转速(rpm)</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="max_power_rev">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="max_torque">最大扭矩(N·m)</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="max_torque">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3"
+                                                   for="max_torque_rev">最大扭矩转速(rpm)</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="max_torque_rev">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="zylinderreihe">发动机排列</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="zylinderreihe">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3"
+                                                   for="ground_clearance">最小离地间隙(mm)</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="ground_clearance">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3"
+                                                   for="special_technology">发动机特有技术</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="special_technology">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="cylinder_num">气缸数(个)</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="cylinder_num">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="valve_num">每缸气门数</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="valve_num">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="ratio">压缩比</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="ratio">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="cylinder_material">缸体材料</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="cylinder_material">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="env_standards">环保标准</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="env_standards">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="front_brake_type">前制动类型</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="front_brake_type">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="rear_brake_type">后制动类型</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="rear_brake_type">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="parking_brake">驻车制动器</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="parking_brake">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="front_tire">前轮胎规格</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="front_tire">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="rear_tire">后轮胎规格</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="rear_tire">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="spare_tire">备胎规格</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="spare_tire">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="abat_vent">后风挡遮阳帘</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="abat_vent">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="rear_wiper">后雨刷器</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="rear_wiper">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="wiper_sensor">雨刷传感器</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="wiper_sensor">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3"
+                                                   for="rearview_electric">后视镜电动调节</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="rearview_electric">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="rearview_fold">后视镜电动折叠</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="rearview_fold">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="rearview_heat">后视镜加热</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="rearview_heat">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="rearview_remember">后视镜记忆</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="rearview_remember">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="front_foglight">前雾灯</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="front_foglight">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="headlight_adjust">大灯高度可调</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="headlight_adjust">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="headlight_clean">大灯清洗装置</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="headlight_clean">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="steering_shift">方向盘换档</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="steering_shift">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="hud">HUD抬头数字显示</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="hud">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="ecu">行车电脑</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="ecu">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="sport_seat">运动座椅</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="sport_seat">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="massage_seat">座椅按摩功能</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="massage_seat">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="lumbar_support">驾驶座腰部支撑调节</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="lumbar_support">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="front_armrest">前座中央扶手</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="front_armrest">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="rear_armrest">后座中央扶手</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="rear_armrest">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="cd">CD</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="cd">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="dvd">DVD</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="dvd">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="cartv">车载电视</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="cartv">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="center_screen">中控台彩色大屏</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="center_screen">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="rear_screen">后排液晶显示器</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="rear_screen">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="manual_acc">手动空调</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="manual_acc">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="automatic_acc">自动空调</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="automatic_acc">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="rear_outlet">后排出风口</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="rear_outlet">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="gra">定速巡航系统</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="gra">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="gps">GPS导航系统</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="gps">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="bluetooth">蓝牙/车载电话</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="bluetooth">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="cooler">车载冰箱</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="cooler">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="mfl">多功能方向盘</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="mfl">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="keyless">遥控钥匙</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="keyless">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="rear_cuphold">后排杯架</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="rear_cuphold">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="cosmetic_mirror">遮阳板化妆镜</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="cosmetic_mirror">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="abs">ABS防抱死</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="abs">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="ebd">制动力分配(EBD/CBC等)</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="ebd">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="tcs">牵引力控制(ASR/TCS/TRC等)</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="tcs">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="drivers_airbag">驾驶座安全气囊</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="drivers_airbag">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3"
+                                                   for="assistant_airbag">副驾驶位安全气囊</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="assistant_airbag">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3"
+                                                   for="front_headairbag">前排头部气囊(气帘)</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="front_headairbag">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3"
+                                                   for="rear_headairbag">后排头部气囊(气帘)</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="rear_headairbag">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="front_sideairbag">前排侧安全气囊</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="front_sideairbag">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="rear_sideairbag">后排侧安全气囊</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="rear_sideairbag">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="launch_time">上市时间</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="launch_time">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="oilwear_1">油耗分组1</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="oilwear_1">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="oilwear_2">油耗分组2</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="oilwear_2">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="oilwear_3">油耗分组3</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="oilwear_3">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="oilwear_4">油耗分组4</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="oilwear_4">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="oilwear_5">油耗分组5</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="oilwear_5">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-lg-3" for="avg_oilwear">平均油耗</label>
+
+                                            <div class="col-lg-7">
+                                                <input class="form-control" id="avg_oilwear">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--</div>-->
+
+                                </div>
+                            </div>
+                            <div class="widget-foot">
+                                <!-- Footer goes here -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <!-- Buttons -->
+                        <div class="col-lg-2 col-lg-offset-2">
+                            <button id="save" type="submit" class="btn btn-success">保存</button>
+                            <button id="finish" type="reset" class="btn btn-default">完成</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Matter ends -->
+
+    </div>
+
+    <!-- Mainbar ends -->
+    <div class="clearfix"></div>
+
+</div>
+
+<div id="authModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title">选择权限</h4>
+            </div>
+            <div class="modal-body">
+                <table id="authTable" class="table table-striped table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>名称</th>
+                        <th>路径</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <div class="widget-foot">
+                    <ul class="pagination pull-right">
+                        <li><a id="preResourcePage" href="javascript:;">上一页</a></li>
+                        <li><a id="curResourcePage" href="javascript:;">1</a></li>
+                        <li><a id="nextResourcePage" href="javascript:;">下一页</a></li>
+                    </ul>
+
+                    <div class="clearfix"></div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <!--<button id="saveAuth" type="button" class="btn btn-primary">提交</button>-->
+                <button type="button" class="btn btn-default" data-dismiss="modal"
+                        aria-hidden="true">关闭
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Content ends -->
+
+<!-- Footer starts -->
+<div id="body-footer">
+</div>
+
+<script src="./js/header.js"></script>
+
+<!-- Footer ends -->
+
+<!-- Scroll to top -->
+<span class="totop"><a href="#"><i class="icon-chevron-up"></i></a></span>
+
+<!-- JS -->
+<script src="../js/jquery.js"></script> <!-- jQuery -->
+<script src="../js/bootstrap.js"></script> <!-- Bootstrap -->
+<script src="../js/jquery-ui-1.9.2.custom.min.js"></script> <!-- jQuery UI -->
+<script src="../js/datatables.min.js"></script>
+<!--<script src="js/fullcalendar.min.js"></script> &lt;!&ndash; Full Google Calendar - Calendar &ndash;&gt;-->
+<!--<script src="js/jquery.rateit.min.js"></script> &lt;!&ndash; RateIt - Star rating &ndash;&gt;-->
+<!--<script src="js/jquery.prettyPhoto.js"></script> &lt;!&ndash; prettyPhoto &ndash;&gt;-->
+
+<!-- jQuery Flot -->
+<!--<script src="js/excanvas.min.js"></script>-->
+<!--<script src="js/jquery.flot.js"></script>-->
+<!--<script src="js/jquery.flot.resize.js"></script>-->
+<!--<script src="js/jquery.flot.pie.js"></script>-->
+<!--<script src="js/jquery.flot.stack.js"></script>-->
+
+<!-- jQuery Notification - Noty -->
+<!--<script src="js/jquery.noty.js"></script> &lt;!&ndash; jQuery Notify &ndash;&gt;-->
+<!--<script src="js/themes/default.js"></script> &lt;!&ndash; jQuery Notify &ndash;&gt;-->
+<!--<script src="js/layouts/bottom.js"></script> &lt;!&ndash; jQuery Notify &ndash;&gt;-->
+<!--<script src="js/layouts/topRight.js"></script> &lt;!&ndash; jQuery Notify &ndash;&gt;-->
+<!--<script src="js/layouts/top.js"></script> &lt;!&ndash; jQuery Notify &ndash;&gt;-->
+<!-- jQuery Notification ends -->
+
+<!--<script src="js/sparklines.js"></script> &lt;!&ndash; Sparklines &ndash;&gt;-->
+<!--<script src="js/jquery.cleditor.min.js"></script> &lt;!&ndash; CLEditor &ndash;&gt;-->
+<!--<script src="js/bootstrap-datetimepicker.min.js"></script> &lt;!&ndash; Date picker &ndash;&gt;-->
+<!--<script src="js/jquery.uniform.min.js"></script> &lt;!&ndash; jQuery Uniform &ndash;&gt;-->
+<!--<script src="js/bootstrap-switch.min.js"></script> &lt;!&ndash; Bootstrap Toggle &ndash;&gt;-->
+<script src="../js/filter.js"></script> <!-- Filter for support page -->
+<script src="../js/custom.js"></script> <!-- Custom codes -->
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="../js/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="../js/jquery.fileupload.js"></script>
+<!--<script src="js/charts.js"></script> &lt;!&ndash; Charts & Graphs &ndash;&gt;-->
+<script data-main="js/app.js" src="../js/require.js"></script>
+
+</body>
+</html>

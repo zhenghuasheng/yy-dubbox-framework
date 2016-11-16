@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <script src="./js/app/checklogin.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <!-- Title and other stuffs -->
+    <title>资源管理</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <!-- Stylesheets -->
+    <link href="../style/bootstrap.css" rel="stylesheet">
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="../style/font-awesome.css">
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="../style/jquery-ui.css">
+    <!-- Main stylesheet -->
+    <link href="../style/style.css" rel="stylesheet">
+    <!-- Widgets stylesheet -->
+    <link href="../style/widgets.css" rel="stylesheet">
+
+    <!-- HTML5 Support for IE -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shim.js"></script>
+    <![endif]-->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon/favicon.png">
+</head>
+
+<body>
+<div id="body-nav">
+</div>
+
+<!-- Main content starts -->
+
+<div class="content">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-dropdown"><a href="#">导航</a></div>
+
+        <!--- Sidebar navigation -->
+        <!-- If the main navigation has sub navigation, then add the class "has_sub" to "li" of main navigation. -->
+        <ul id="nav">
+        </ul>
+    </div>
+
+    <!-- Sidebar ends -->
+
+    <!-- Main bar -->
+    <div class="mainbar">
+
+        <!-- Page heading -->
+        <div class="page-head">
+            <h2 class="pull-left"><i class="icon-table"></i> 资源管理</h2>
+
+            <!-- Breadcrumb -->
+            <div class="bread-crumb pull-right">
+                <a href="../index.html"><i class="icon-home"></i> 主页</a>
+                <!-- Divider -->
+                <span class="divider">/</span>
+                <a href="#" class="bread-current">资源</a>
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+        <!-- Page heading ends -->
+
+        <!-- Matter -->
+
+        <div class="matter">
+            <div class="container">
+
+                <!-- Table -->
+
+                <div class="row">
+
+                    <div class="col-md-12">
+
+                        <div class="widget">
+
+                            <div class="widget-head">
+                                <div class="pull-left">资源列表</div>
+                                <div class="widget-icons pull-right">
+                                    <a href="javascript:;" onclick="resourceFindController.onClickAddResource()"
+                                       data-toggle="tooltip" data-placement="auto" title="添加资源">
+                                        <i class="icon-plus"></i></a>
+                                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
+                                    <a href="#" class="wclose"><i class="icon-remove"></i></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="widget-content">
+
+                                <table id="resourceTable" class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>名称</th>
+                                        <th>路径</th>
+                                        <th>标识</th>
+                                        <th>编码</th>
+                                        <th>父编码</th>
+                                        <!--<th>类型</th>-->
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="resourceList">
+                                    </tbody>
+                                </table>
+
+                                <div class="widget-foot">
+
+
+                                    <ul class="pagination pull-right">
+                                        <li><a id="preResource" href="javascript:;">上一页</a></li>
+                                        <li><a id="currentResource" href="javascript:;">1</a></li>
+                                        <li><a id="nextResource" href="javascript:;">下一页</a></li>
+                                    </ul>
+
+                                    <div class="clearfix"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Matter ends -->
+
+    </div>
+
+    <!-- Mainbar ends -->
+    <div class="clearfix"></div>
+
+</div>
+<!-- Content ends -->
+
+<!-- Footer starts -->
+<div id="body-footer">
+</div>
+
+<script src="./js/header.js"></script>
+
+<!-- Footer ends -->
+
+<!-- Scroll to top -->
+<span class="totop"><a href="#"><i class="icon-chevron-up"></i></a></span>
+
+<!-- JS -->
+<script src="../js/jquery.js"></script> <!-- jQuery -->
+<script src="../js/bootstrap.js"></script> <!-- Bootstrap -->
+<script src="../js/jquery-ui-1.9.2.custom.min.js"></script> <!-- jQuery UI -->
+<script src="../js/datatables.min.js"></script>
+<script src="../js/filter.js"></script> <!-- Filter for support page -->
+<script src="../js/custom.js"></script> <!-- Custom codes -->
+<script data-main="js/app.js" src="../js/require.js"></script>
+
+</body>
+</html>

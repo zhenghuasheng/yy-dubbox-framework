@@ -1,0 +1,14 @@
+2015-11-20 08:27:51,503-[WARN]  [DUBBO] Close channel HeaderExchangeClient [channel=com.alibaba.dubbo.remoting.transport.netty.NettyClient [/192.168.10.27:50864 -> /192.168.10.27:30990]], because heartbeat read idle time out: 180000ms, dubbo version: 2.8.4, current host: 192.168.10.27
+2015-11-20 08:27:52,110-[INFO]  [DUBBO] Close netty channel [id: 0xaaca1ceb, /192.168.10.27:50864 => /192.168.10.27:30990], dubbo version: 2.8.4, current host: 192.168.10.27
+2015-11-20 08:27:51,516-[INFO] Client session timed out, have not heard from server in 46775664ms for sessionid 0x1510e480e840075, closing socket connection and attempting reconnect
+2015-11-20 08:27:52,219-[INFO] zookeeper state changed (Disconnected)
+2015-11-20 08:27:52,522-[INFO]  [DUBBO] disconected from /192.168.10.27:30990,url:dubbo://192.168.10.27:30990/com.etong.data.auto.service.AutoData?anyhost=true&application=data-user-service-app&check=false&cluster=failfast&codec=dubbo&dubbo=2.8.4&generic=false&heartbeat=60000&interface=com.etong.data.auto.service.AutoData&methods=getExpandVehicleByExample,getCarPhotoByExample,getCarByExample,setExpandVehicle,getCarParamByExample,getVehicleByExample&pid=8200&revision=auto&side=consumer&timeout=5000&timestamp=1447929786568, dubbo version: 2.8.4, current host: 192.168.10.27
+2015-11-20 08:27:52,919-[INFO]  [DUBBO] Close old netty channel [id: 0xaaca1ceb, /192.168.10.27:50864 :> /192.168.10.27:30990] on create new netty channel [id: 0x9c3d472a, /192.168.10.27:53664 => /192.168.10.27:30990], dubbo version: 2.8.4, current host: 192.168.10.27
+2015-11-20 08:27:52,923-[INFO]  [DUBBO] Successed connect to server /192.168.10.27:30990 from NettyClient 192.168.10.27 using dubbo version 2.8.4, channel is NettyChannel [channel=[id: 0x9c3d472a, /192.168.10.27:53664 => /192.168.10.27:30990]], dubbo version: 2.8.4, current host: 192.168.10.27
+2015-11-20 08:27:56,602-[WARN] Remove a session: 192.168.10.38:11211
+2015-11-20 08:27:58,616-[WARN] Trying to connect to 192.168.10.38:11211 for 1 times
+2015-11-20 08:27:58,618-[WARN] Add a session: 192.168.10.38:11211
+2015-11-20 08:27:59,498-[INFO] Opening socket connection to server zookeeper.com/192.168.10.27:5181. Will not attempt to authenticate using SASL (unknown error)
+2015-11-20 08:27:59,499-[INFO] Socket connection established to zookeeper.com/192.168.10.27:5181, initiating session
+2015-11-20 08:28:03,598-[INFO] Session establishment complete on server zookeeper.com/192.168.10.27:5181, sessionid = 0x1510e480e840075, negotiated timeout = 40000
+2015-11-20 08:28:03,600-[INFO] zookeeper state changed (SyncConnected)

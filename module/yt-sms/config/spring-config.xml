@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringFacetInspection -->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:annotation-config/>
+    <context:property-placeholder location="config/rocketmq.properties"/>
+    <context:component-scan base-package="com.etong.sms"/>
+    <aop:aspectj-autoproxy/>
+    <import resource="simplesm-config.xml"/>
+    <import resource="classpath:simplesm-context.xml"/>
+    <!--<import resource="classpath:auth-config.xml"/>-->
+    <import resource="classpath:yt-db.xml"/>
+
+    <bean id="smsDao" class="com.etong.sms.data.SmsDaoImpl">
+        <property name="dbManager" ref="dbManagerImpl"/>
+    </bean>
+    <bean id="consumerDao" class="com.etong.sms.data.ConsumerDaoImpl">
+        <property name="dbManager" ref="dbManagerImpl"/>
+    </bean>
+
+    <bean id="messageServer" class="com.etong.sms.service.impl.MessageServerImpl">
+        <property name="smsDao" ref="smsDao"/>
+        <property name="consumerDao" ref="consumerDao"/>
+        <property name="namesrvAddr" value="${namesrvAddr}"/>
+        <property name="memcacheClient" ref="defaultMemcachedClient"/>
+    </bean>
+
+    <bean id="consumerServer" class="com.etong.sms.service.impl.ConsumerServerImpl">
+        <property name="consumerDao" ref="consumerDao"/>
+    </bean>
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="yt-sms-server"/>
+    <dubbo:protocol name="rest" port="8392" threads="500" contextpath="service" server="tomcat" accepts="500" extension="com.etong.sms.service.impl.ControlFilter"/>
+
+    <!-- 使用multicast广播注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://zookeeper.com:5181" file="./registry.file"/>
+
+    <dubbo:service interface="com.etong.sms.service.ConsumerServer" ref="consumerServer"/>
+</beans>

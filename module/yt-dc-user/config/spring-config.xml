@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringFacetInspection -->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <aop:aspectj-autoproxy/>
+    <import resource="classpath:auth-config.xml"/>
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="dc-user-service-app"/>
+
+    <!-- 使用multicast广播注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://zookeeper.com:5181" file="./registry.file"/>
+
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <dubbo:protocol name="dubbo" port="30891"/>
+    <dubbo:protocol name="rest" port="8480" threads="500"
+                    contextpath="services" server="tomcat" accepts="500"
+                    extension="com.etong.filter.RestFilter"/>
+
+    <dubbo:service protocol="dubbo" cluster="failfast" interface="com.etong.pt.api.user.PtUserService" ref="ptUserService" timeout="15000"/>
+    <dubbo:service protocol="rest" cluster="failfast"
+                   interface="com.etong.pt.api.user.facade.PtUserRestService"
+                   ref="userRestService" timeout="15000"/>
+    <dubbo:service interface="com.etong.pt.api.customer.PtCustomerService" ref="ptCustomerService" cluster="failfast" timeout="15000"/>
+    <dubbo:service interface="com.etong.pt.api.vehicle.PtVehicleService" ref="ptVehicleService" cluster="failfast" timeout="15000"/>
+
+    <dubbo:reference id="ptUserDao" interface="com.etong.pt.dao.PtUserDao"/>
+    <dubbo:reference id="ptSessionDao" interface="com.etong.pt.dao.PtSessionDao"/>
+    <dubbo:reference id="ptCustomerDao" interface="com.etong.pt.dao.PtCustomerDao"/>
+    <dubbo:reference id="ptVehicleDao" interface="com.etong.pt.dao.PtVehicleDao"/>
+
+    <bean id="ptUserService" class="com.etong.pt.provider.user.PtUserServiceImpl">
+        <property name="smsServerUrl" value="http://sms.com:8386/sms_service_etong_validate/sms/send"/>
+        <property name="ptUserDao" ref="ptUserDao"/>
+        <property name="ptSessionService" ref="ptSessionService"/>
+        <property name="ptCustomerService" ref="ptCustomerService"/>
+        <property name="ptVehicleService" ref="ptVehicleService"/>
+        <property name="authService" ref="authService"/>
+    </bean>
+
+    <bean id="ptSessionService" class="com.etong.pt.provider.session.PtSessionServiceImpl">
+        <property name="ptSessionDao" ref="ptSessionDao"/>
+    </bean>
+    <bean id="ptCustomerService" class="com.etong.pt.provider.customer.PtCustomerServiceImpl">
+        <property name="ptCustomerDao" ref="ptCustomerDao"/>
+    </bean>
+    <bean id="ptVehicleService" class="com.etong.pt.provider.vehicle.PtVehicleServiceImpl">
+        <property name="ptVehicleDao" ref="ptVehicleDao"/>
+    </bean>
+    <bean id="userRestService" class="com.etong.pt.provider.user.facade.PtUserRestServiceImpl">
+        <property name="ptUserService" ref="ptUserService"/>
+    </bean>
+
+</beans>

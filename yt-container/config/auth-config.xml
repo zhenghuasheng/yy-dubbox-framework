@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringFacetInspection -->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <aop:aspectj-autoproxy/>
+    <!--平台数据服务接口-->
+    <!--<bean id="authService" class="com.etong.dc.auth.AuthServiceImpl">-->
+    <!--<property name="authData" ref="authData"/>-->
+    <!--</bean>-->
+    <!-- spring aop 方法调用处理bean-->
+    <bean id="methodAnalysis" class="com.etong.filter.MethodAnalysis"/>
+
+    <bean id="cacheVersion" class="com.etong.container.utility.CacheVersion"/>
+
+    <bean id="cacheKey" class="com.etong.container.utility.CacheKey">
+        <property name="cacheVersion" ref="cacheVersion"/>
+    </bean>
+
+    <!-- 使用multicast广播注册中心暴露服务地址 -->
+    <dubbo:provider filter="providerAuthFilter"/>
+    <dubbo:consumer filter="consumerAuthFilter"/>
+
+    <!-- 声明需要暴露的服务接口 -->
+    <!--<dubbo:service cluster="failfast" interface="com.etong.dc.auth.AuthService" ref="authService" timeout="5000"/>-->
+
+    <dubbo:reference id="authService" interface="com.etong.dc.auth.AuthService" protocol="dubbo"/>
+</beans>

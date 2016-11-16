@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringFacetInspection -->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <aop:aspectj-autoproxy/>
+    <import resource="simplesm-config.xml"/>
+    <import resource="classpath:auth-config.xml"/>
+
+    <!--平台数据服务接口-->
+    <bean id="autoService" class="com.etong.dc.auto.service.AutoServiceImpl">
+        <property name="autoData" ref="autoData"/>
+        <property name="cacheKey" ref="cacheKey"/>
+    </bean>
+
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="dc-auto-service-app"/>
+
+    <!-- 使用multicast广播注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://zookeeper.com:5181" file="./registry.file"/>
+
+    <dubbo:protocol name="dubbo" port="30907"/>
+    <dubbo:protocol name="rest" port="8391" threads="500" contextpath="services" server="tomcat" accepts="500" extension="com.etong.filter.RestFilter"/>
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service cluster="failfast" interface="com.etong.dc.auto.service.AutoService" ref="autoService" timeout="5000">
+        <dubbo:method name="exportCar" timeout="500000"/>
+    </dubbo:service>
+
+    <dubbo:reference id="autoData" interface="com.etong.data.auto.service.AutoData"/>
+</beans>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringFacetInspection -->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <aop:aspectj-autoproxy/>
+    <!--<import resource="classpath:auth-config.xml"/>-->
+    <import resource="simplesm-config.xml"/>
+
+    <bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+        <property name="config">
+            <bean class="com.google.code.kaptcha.util.Config">
+                <constructor-arg>
+                    <props>
+                        <prop key="kaptcha.border">no</prop>
+                        <prop key="kaptcha.border.color">105,179,90</prop>
+                        <prop key="kaptcha.textproducer.font.color">red</prop>
+                        <prop key="kaptcha.image.width">250</prop>
+                        <prop key="kaptcha.textproducer.font.size">80</prop>
+                        <prop key="kaptcha.image.height">90</prop>
+                        <prop key="kaptcha.session.key">code</prop>
+                        <!--<prop key="kaptcha.textproducer.char.string">0123456789</prop>-->
+                        <prop key="kaptcha.textproducer.char.length">4</prop>
+                        <prop key="kaptcha.textproducer.font.names">宋体,楷体,微软雅黑</prop>
+                    </props>
+                </constructor-arg>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="verifyData" class="com.etong.captcha.dao.VerifyDataImpl"/>
+
+    <bean id="verifyService" class="com.etong.captcha.service.VerifyServiceImpl">
+        <property name="captchaProducer" ref="captchaProducer"/>
+        <property name="verifyData" ref="verifyData"/>
+    </bean>
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="captcha-service-app"/>
+
+    <!-- 使用multicast广播注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://zookeeper.com:5181" file="./registry.file"/>
+
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <dubbo:protocol name="rest" port="8402" threads="500" contextpath="services" server="tomcat" accepts="500"
+                    extension="com.etong.filter.RestFilter"/>
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service cluster="failfast" interface="com.etong.captcha.service.VerifyService" ref="verifyService"
+                   timeout="15000"/>
+</beans>

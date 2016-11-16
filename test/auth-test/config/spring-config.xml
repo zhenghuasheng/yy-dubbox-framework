@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringFacetInspection -->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--<aop:aspectj-autoproxy/>-->
+
+    <!--平台数据服务接口-->
+    <!--<bean id="authDemo" class="com.etong.test.auth.DemoClient" init-method="Start">-->
+    <!--<property name="authService" ref="authService"/>-->
+    <!--</bean>-->
+    <bean id="autoDemo" class="com.etong.test.auto.DemoClient" init-method="start">
+        <property name="autoService" ref="autoService"/>
+    </bean>
+
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="test-auth-service-app"/>
+
+    <!-- 使用multicast广播注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://zookeeper.com:5181" file="./registry.file"/>
+    <!--<dubbo:provider filter="providerAuthFilter"/>-->
+    <dubbo:consumer filter="consumerAuthFilter"/>
+
+    <!-- 声明需要暴露的服务接口 -->
+    <!--<dubbo:reference id="authService" interface="com.etong.dc.auth.AuthService"/>-->
+    <dubbo:reference id="autoService" interface="com.etong.dc.auto.service.AutoService" protocol="dubbo"/>
+</beans>

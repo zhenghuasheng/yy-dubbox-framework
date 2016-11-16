@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringFacetInspection -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--mybatis包装管理器-->
+    <bean id="dbManagerImpl" class="com.etong.pt.data.dc.DbManagerImpl"/>
+
+    <!--字典辅助类-->
+    <bean id="dictHelper" class="com.etong.pt.data.dc.DictHelperImpl">
+        <property name="dbManager" ref="dbManagerImpl"/>
+    </bean>
+
+    <bean id="indexCache" class="com.etong.pt.data.dc.PtIndexCache">
+        <property name="dbManager" ref="dbManagerImpl"/>
+    </bean>
+
+    <!--自增索引辅助类-->
+    <bean id="ptIndexImpl" class="com.etong.pt.data.dc.PtIndexHelper">
+        <property name="dbManager" ref="dbManagerImpl"/>
+        <property name="indexCache" ref="indexCache"/>
+    </bean>
+</beans>

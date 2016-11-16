@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <script src="./js/app/checklogin.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <!-- Title and other stuffs -->
+    <title>角色编辑</title>
+    <meta name="keywords" content=""/>
+    <meta name="description"
+          content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <!-- Stylesheets -->
+    <link href="../style/bootstrap.css" rel="stylesheet">
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="../style/font-awesome.css">
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="../style/jquery-ui.css">
+    <!-- Main stylesheet -->
+    <link href="../style/style.css" rel="stylesheet">
+    <!-- Widgets stylesheet -->
+    <link href="../style/widgets.css" rel="stylesheet">
+
+    <!-- HTML5 Support for IE -->
+    <!--[if lt IE 9]>
+    <script src="../js/html5shim.js"></script>
+    <![endif]-->
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../img/favicon/favicon.png">
+</head>
+
+<body>
+
+<div id="body-nav">
+</div>
+
+<!-- Main content starts -->
+
+<div class="content">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-dropdown"><a href="#">导航</a></div>
+
+        <!--- Sidebar navigation -->
+        <!-- If the main navigation has sub navigation, then add the class "has_sub" to "li" of main navigation. -->
+        <ul id="nav">
+        </ul>
+    </div>
+
+    <!-- Sidebar ends -->
+
+    <!-- Main bar -->
+    <div class="mainbar">
+
+        <!-- Page heading -->
+        <div class="page-head">
+            <!-- Page heading -->
+            <h2 class="pull-left">
+                <!-- page meta -->
+                <span class="page-meta">角色编辑</span>
+            </h2>
+
+
+            <!-- Breadcrumb -->
+            <div class="bread-crumb pull-right">
+                <a href="../index.html"><i class="icon-home"></i> 主页</a>
+                <!-- Divider -->
+                <span class="divider">/</span>
+                <a href="resource.html" class="bread-current">角色</a>
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+        <!-- Page heading ends -->
+
+
+        <!-- Matter -->
+
+        <div class="matter">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-8">
+
+                        <div class="widget wred">
+                            <div class="widget-head">
+                                <div class="pull-left">角色内容</div>
+                                <div class="widget-icons pull-right">
+                                    <a href="#" class="wminimize"><i class="icon-chevron-up"></i></a>
+                                    <a href="#" class="wclose"><i class="icon-remove"></i></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="widget-content">
+                                <div class="padd">
+
+                                    <!-- Profile form -->
+
+                                    <div class="form profile">
+                                        <!-- Edit profile form (not working)-->
+                                        <div class="form-horizontal">
+                                            <!-- Name -->
+                                            <div class="form-group">
+                                                <label class="control-label col-lg-3" for="name">名称</label>
+
+                                                <div class="col-lg-6">
+                                                    <input type="text" class="form-control" id="name">
+                                                </div>
+                                            </div>
+                                            <!-- Remark -->
+                                            <div class="form-group">
+                                                <label class="control-label col-lg-3" for="remark">说明</label>
+
+                                                <div class="col-lg-6">
+                                                    <textarea class="form-control" id="remark"></textarea>
+                                                </div>
+                                            </div>
+                                            <!-- stid -->
+                                            <!--<div class="form-group">-->
+                                            <!--<label class="control-label col-lg-3">所属系统</label>-->
+
+                                            <!--<div class="col-lg-6">-->
+                                            <!--<select id="stid" class="form-control">-->
+                                            <!--<option value="1">易通后台</option>-->
+                                            <!--<option value="1001">大圣购车</option>-->
+                                            <!--</select>-->
+                                            <!--</div>-->
+                                            <!--</div>-->
+
+                                            <!-- Buttons -->
+                                            <div class="form-group">
+                                                <!-- Buttons -->
+                                                <div class="col-lg-6 col-lg-offset-1">
+                                                    <button id="save" type="submit" class="btn btn-success">保存</button>
+                                                    <button id="finish" type="reset" class="btn btn-default">完成</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Matter ends -->
+
+    </div>
+
+    <!-- Mainbar ends -->
+    <div class="clearfix"></div>
+
+</div>
+<!-- Content ends -->
+
+<!-- Footer starts -->
+<div id="body-footer">
+</div>
+
+<script src="./js/header.js"></script>
+
+<!-- Footer ends -->
+
+<!-- Scroll to top -->
+<span class="totop"><a href="#"><i class="icon-chevron-up"></i></a></span>
+
+<!-- JS -->
+<script src="../js/jquery.js"></script> <!-- jQuery -->
+<script src="../js/bootstrap.js"></script> <!-- Bootstrap -->
+<script src="../js/jquery-ui-1.9.2.custom.min.js"></script> <!-- jQuery UI -->
+<script src="../js/datatables.min.js"></script>
+<script src="../js/filter.js"></script> <!-- Filter for support page -->
+<script src="../js/custom.js"></script> <!-- Custom codes -->
+<script data-main="js/app.js" src="../js/require.js"></script>
+
+</body>
+</html>
